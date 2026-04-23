@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/*For Calendar/CalendarPage*/
+@source inline("nth-8:col-start-{0..10..1}");
+@source inline("cursor-pointer");
+
+/*For Modal*/
+@source inline("w-auto");
+@source inline("w-150");
+@source inline("md:w-auto");
+@source inline("md:w-150");
+
+:root {
+    --font-color: #dbdbdb;
+    --dimmed-color: #dbdbdbaf;
+    --more-dimmed-color: #dbdbdb57;
+    --bg-color: #232323;
+    --light-color: #2f2f2f;
+    --dimmed-light-color: #2f2f2faf;
+    --dark-color: #191919;
+    --darker-color: #121212;
+    --darkest-color: #090909;
+    --dimmed-darker-color: #121212bf;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #232323;
+    color: var(--font-color);
+    font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+@theme {
+    --breakpoint-xs: 26.5rem;
+}
+
+.default-button-style {
+    @apply bg-[var(--darker-color)] px-4 py-2 rounded-md cursor-pointer hover:bg-[var(--darkest-color)] text-center;
+}
+
+.default-delete-button-style {
+    @apply bg-red-800 w-full rounded-md py-2 px-4 cursor-pointer hover:bg-red-700;
+}
+
+.default-main-style-256 {
+    @apply flex flex-col max-sm:items-center flex-wrap w-full h-full mx-auto mt-8 p-4 rounded-lg lg:w-256;
+}
+
+.default-main-style-128 {
+    @apply flex flex-col max-sm:items-center flex-wrap w-full mt-8 p-4 mx-auto sm:w-128 rounded-lg;
+}
+
+.default-main-style-128-with-bg {
+    @apply flex flex-col max-sm:items-center flex-wrap mt-8 p-4 mx-auto sm:w-128 rounded-lg bg-[var(--dark-color)] w-94/100;
+}
+
+.header-li {
+    @apply flex items-center;
+}
